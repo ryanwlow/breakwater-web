@@ -1,0 +1,40 @@
+{
+  "about": "Player-facing changes, newest first, for comparing play counts before and after each one. Published with the public web build as changes.json. at: when it went live (the merge to main, UTC). builds: which builds it reached (demo, playtest). kind: gameplay, balance, onboarding, ui, content, fix, tracking, page. watch: the play-count paths (without the itch-demo/ prefix) expected to move, and which way.",
+  "changes": [
+    {
+      "at": "2026-10-05T21:09:44Z",
+      "pr": 21,
+      "title": "Playtest tools: game speed and checkpoint bases",
+      "kind": "tracking",
+      "builds": ["playtest"],
+      "notes": "Settings gets game speed and seven checkpoint bases in the playtest build only. A base that uses either is a test base and sends no play counts, so the playtest page's numbers may drop slightly from here.",
+      "watch": []
+    },
+    {
+      "at": "2026-10-05T20:23:50Z",
+      "pr": 20,
+      "title": "Warnings for standing orders the fit can't fire",
+      "kind": "ui",
+      "builds": ["demo", "playtest"],
+      "notes": "The orders editor, the fitting screen and the sortie launch panel warn when a pilot's standing orders can never fire with the fit (no weapon for the action, or no sonar for wind-up orders). Mostly matters from the shelf and canyon onward.",
+      "watch": ["clear/harbour_mouth up", "clear/drift up", "clear/warden up"]
+    },
+    {
+      "at": "2026-10-05T18:11:02Z",
+      "pr": 19,
+      "title": "Screen size and device on play counts",
+      "kind": "tracking",
+      "builds": ["demo", "playtest"],
+      "notes": "Every count carries the screen size (GoatCounter's Sizes panel), and each open counts device/phone, device/tablet or device/desktop. Device counts start here; nothing changed for players.",
+      "watch": []
+    },
+    {
+      "at": "2026-10-05T17:49:32Z",
+      "title": "Demo goes public on itch",
+      "kind": "page",
+      "builds": ["demo"],
+      "notes": "slowlichen.itch.io/breakwater switched to the demo build (through the Warden, level 45) and made public. The baseline: the Melvor-style layout, fitting stats, fight backdrops and damage numbers were all already in.",
+      "watch": []
+    }
+  ]
+}
