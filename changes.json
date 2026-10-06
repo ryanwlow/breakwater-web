@@ -2,7 +2,39 @@
   "about": "Player-facing changes, newest first, for comparing play counts before and after each one. Published with the public web build as changes.json. at: when it went live (the merge to main, UTC). builds: which builds it reached (demo, playtest). kind: gameplay, balance, onboarding, ui, content, fix, tracking, page. watch: the play-count paths (without the itch-demo/ prefix) expected to move, and which way.",
   "changes": [
     {
-      "at": "2026-10-06T04:08:56Z",
+      "at": "2026-10-06T13:16:44Z",
+      "pr": 25,
+      "title": "Hangar opens in the first minute, and the walk-through points at the right buttons",
+      "kind": "onboarding",
+      "builds": [
+        "demo",
+        "playtest"
+      ],
+      "notes": "The Hangar tab used to appear only after a machined part (three disciplines in), and 36% of new players never saw it. It now opens at Salvage level 2 or the first steel plate, about a minute in, and pulses until visited. The fitting step names the frame as the Hangar shows it (e.g. 'Fit Gantry', not 'Fit the Stevedore'), Show me picks the sealant bay, and the next button to press scrolls into view.",
+      "watch": [
+        "start/hangar up",
+        "start/hangar-visit up",
+        "start/fit up",
+        "first-sortie up"
+      ]
+    },
+    {
+      "at": "2026-10-06T13:16:44Z",
+      "pr": 25,
+      "title": "Warning when the browser won't keep the save",
+      "kind": "fix",
+      "builds": [
+        "demo",
+        "playtest"
+      ],
+      "notes": "About 5% of opens couldn't save (save/blocked). The game now checks storage on load and, if it's blocked, says so at the top of the page with a Save code button, before the player puts time in.",
+      "watch": [
+        "save/blocked unchanged (it's the browser)",
+        "fewer of those players lost: watch returning opens"
+      ]
+    },
+    {
+      "at": "2026-10-06T04:54:52Z",
       "pr": 24,
       "title": "Dropdowns stay open long enough to pick from",
       "kind": "fix",
