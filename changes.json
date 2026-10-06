@@ -2,7 +2,24 @@
   "about": "Player-facing changes, newest first, for comparing play counts before and after each one. Published with the public web build as changes.json. at: when it went live (the merge to main, UTC). builds: which builds it reached (demo, playtest). kind: gameplay, balance, onboarding, ui, content, fix, tracking, page. watch: the play-count paths (without the itch-demo/ prefix) expected to move, and which way.",
   "changes": [
     {
-      "at": "2026-10-05T21:35:11Z",
+      "at": "2026-10-06T04:08:56Z",
+      "pr": 24,
+      "title": "Dropdowns stay open long enough to pick from",
+      "kind": "fix",
+      "builds": [
+        "demo",
+        "playtest"
+      ],
+      "notes": "Reported in the itch comments: dropdowns closed before anything could be picked. The screen redraws several times a second and replaced the open dropdown whenever what that screen showed changed (Stores while work runs, the Hangar during sorties and production). Redraws now wait while a dropdown is open. Affects the standing-orders editor in the walk-through, the pilot and saved-fit pickers, the surplus line and the sortie companion.",
+      "watch": [
+        "start/orders up",
+        "start/sorties up",
+        "first-sortie up",
+        "feedback/open down"
+      ]
+    },
+    {
+      "at": "2026-10-05T21:36:53Z",
       "pr": 23,
       "title": "Feedback link to the itch comments",
       "kind": "ui",
@@ -17,7 +34,7 @@
       ]
     },
     {
-      "at": "2026-10-05T21:35:11Z",
+      "at": "2026-10-05T21:36:53Z",
       "pr": 23,
       "title": "Counts for onboarding steps, errors and lost saves",
       "kind": "tracking",
